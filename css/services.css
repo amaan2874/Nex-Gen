@@ -1,0 +1,252 @@
+.containerimg {
+    background-image: url('/images/Image\ 18.png'); /* Add your background image here */
+    background-size: cover; /* Ensure the image covers the entire div */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Padding for smaller screens */
+    color: white; /* White text for contrast */
+    background-repeat: no-repeat;
+}
+
+.content {
+    max-width: 500px; /* Limit the width of the content */
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+}
+
+h1 {
+    font-size: 2.5rem; /* Large heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+p {
+    font-size: 1.2rem; /* Adjust font size for the paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.btn {
+    display: inline-block; /* Display as a block but inline with text */
+    background-color:#00bfff; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded button corners */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 1.2rem; /* Adjust font size for the button */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.btn:hover {
+    background-color: #008fbf; /* Darker button color on hover */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+
+.features-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.features-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.features-section .highlight {
+    color: #29abe2; /* Same color as in the image */
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.feature-card2{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.sideimg{
+    width: 40%;
+    height: 70%;
+    /* background-color: red; */
+}
+
+.feature-card img {
+    /* background-size: cover; */
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    /* margin-left: 20px; Adjust space between text and image */
+}
+
+.feature-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.feature-card-content {
+    flex: 1;
+}
+
+.learn-more {
+    color: #29abe2;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+.faq-container {
+    max-width: 100%;
+    margin: 0 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.para {
+    font-size: 1rem;
+    /* margin-bottom: 20px; */
+    color: #666;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    /* padding: 15px 0; */
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    /* background-color: red; */
+}
+
+.faq-question .arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 10px;
+}
+
+.faq-question.active .arrow {
+    transform: rotate(180deg);
+}
+
+.faq-answer .para-2 {
+    font-size: 0.8rem;
+    color: #333;
+    /* background-color: green; */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .faq-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .faq-question {
+        font-size: 0.9rem;
+        padding: 10px 0;
+    }
+
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Smaller heading on smaller screens */
+    }
+
+    p {
+        font-size: 1rem; /* Smaller paragraph text */
+    }
+
+    .content {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Even smaller heading on very small screens */
+    }
+
+    p {
+        font-size: 0.9rem; /* Smaller paragraph text */
+    }
+
+    .btn {
+        font-size: 1rem; /* Smaller button text */
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/features.css">
+</head>
+<body>
+       <!-- Navbar -->
+       <nav class="navbar">
+        <div class="container">
+            <img src="/images/Group 13.png" alt="logo">
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776;
+            </div>
+            <div class="menu" id="menu">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="features.html"class="active">Features</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header">
+        <p>Opening Hours: Mon - Sat : 09:00 am - 06:00 pm, Sunday Closed</p>
+    </div>
+
+    <section class="projects-section">
+        <h1>Our <span>Projects</span></h1>
+        <div class="tabs">
+            <button class="tab active">All</button>
+            <button class="tab">Customer Support</button>
+            <button class="tab">Web Development</button>
+            <button class="tab">Cloud Service</button>
+            <button class="tab">Mobile App</button>
+        </div>
+
+        <div class="project-category">
+            <div class="rl">
+                <h2>Customer <span>Support</span></h2>
+            <a href="#" class="view-more">View more</a>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">&#8249;</button>
+                <div class="carousel-images">
+                    <img src="/images/Image 59.png" alt="Customer Support Image 1">
+                    <img src="/images/Image 60.png" alt="Customer Support Image 2">
+                </div>
+                <button class="carousel-control next">&#8250;</button>
+            </div>
+        </div>
+
+        <div class="project-category">
+            <div class="rl">
+                <h2>Web <span>Development</span></h2>
+            <a href="#" class="view-more">View more</a>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">&#8249;</button>
+                <div class="carousel-images">
+                    <img src="/images/Image 62.png" alt="Web Development Image 1">
+                    <img src="/images/Image 63.png" alt="Web Development Image 2">
+                </div>
+                <button class="carousel-control next">&#8250;</button>
+            </div>
+        </div>
+
+        <div class="project-category">
+            <div class="rl">
+                <h2>Cloud <span>Service</span></h2>
+            <a href="#" class="view-more">View more</a>
+            </div>
+            <div class="carousel">
+                <button class="carousel-control prev">&#8249;</button>
+                <div class="carousel-images">
+                    <img src="/images/Image.png" alt="Cloud Service Image 1">
+                    <img src="/images/Image (1).png" alt="Cloud Service Image 2">
+                </div>
+                <button class="carousel-control next">&#8250;</button>
+            </div>
+        </div>
+
+        <div class="loadmoresec">
+            <button class="load-more">Load more</button>
+        </div>
+    </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="logo2">
+                    <img src="/images/Group 13.png" alt="logo">
+                </div>
+                <h3 style="text-align: center;">Subscribe to our newsletter</h3>
+                <div class="newsletter">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </div>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>Product</h4>
+                        <a href="#">Features</a>
+                        <a href="#">Pricing</a>
+                    </div>
+                    <div class="link-column">
+                        <h4>Resources</h4>
+                        <a href="#">Blog</a>
+                        <a href="#">User guides</a>
+                        <a href="#">Webinars</a>
+                    </div>
+                    <div class="link-column">
+                        <h4>Company</h4>
+                        <a href="#">About us</a>
+                        <a href="#">Contact us</a>
+                    </div>
+                    <div class="link-column">
+                        <h4>Plans & Pricing</h4>
+                        <a href="#">Personal</a>
+                        <a href="#">Start up</a>
+                        <a href="#">Organization</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                var menu = document.getElementById('menu');
+                menu.classList.toggle('show');
+            });
+
+            
+            </script>
+            <script>
+                const carousels = document.querySelectorAll('.carousel');
+
+carousels.forEach(carousel => {
+    const images = carousel.querySelector('.carousel-images');
+    const prevButton = carousel.querySelector('.carousel-control.prev');
+    const nextButton = carousel.querySelector('.carousel-control.next');
+    
+    let offset = 0;
+
+    // Check if nextButton exists before adding event listener
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            offset = Math.min(offset + 1, images.childElementCount - 1);
+            images.style.transform = `translateX(-${offset * 100}%)`;
+        });
+    }
+
+    // Check if prevButton exists before adding event listener
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            offset = Math.max(offset - 1, 0);
+            images.style.transform = `translateX(-${offset * 100}%)`;
+        });
+    }
+});
+
+            </script>
+</body>
+</html>
