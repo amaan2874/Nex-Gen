@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - NexGen Outsourcing</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/contact.css">
 </head>
 <body>
-
-     <!-- Navbar -->
-     <nav class="navbar">
+      <!-- Navbar -->
+      <nav class="navbar">
         <div class="container">
             <img src="/images/Group 13.png" alt="logo">
             <div class="menu-toggle" id="menu-toggle">
@@ -20,10 +19,10 @@
             </div>
             <div class="menu" id="menu">
                 <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="features.html">Features</a>
-                <a href="aboutus.html">About Us</a>
-                <a href="pricing.html">Pricing</a>
+                <a href="services.html">Who We Are</a>
+                <a href="features.html">What We Do</a>
+                <a href="aboutus.html">Products</a>
+                <a href="pricing.html">Our Impact</a>
                 <a href="contact.html" class="active">Contact Us</a>
             </div>
         </div>
@@ -69,14 +68,16 @@
     <!-- Get in Touch Section -->
     <section class="get-in-touch">
         <div class="container">
-            <div class="form-section">
+            <div class="form-section card">
                 <h2>Get in touch</h2>
-                <form>
-                    <input type="text" placeholder="Your name" required>
-                    <input type="email" placeholder="Your email" required>
-                    <textarea placeholder="How can we help?" required></textarea>
+                <form name="submit-to-google-sheet">
+                    <input id="clearName" name="name" type="text" placeholder="Your name" required>
+                    <input id="clearEmail" name="email" type="email" placeholder="Your email" required>
+                    <textarea id="clearMessage" name="message" placeholder="How can we help?" required></textarea>
                     <button class="btn" type="submit">Send my message</button>
                 </form>
+                <div id="msg"></div>
+                
             </div>
             <div class="image-section">
                 <img src="/images/Image 86.png" alt="Contact Us">
@@ -149,7 +150,7 @@
                     <a href="#">Pricing</a>
                 </div>
                 <div class="link-column">
-                    <h4>Resources</h4>
+                    <h4>Services</h4>
                     <a href="#">Blog</a>
                     <a href="#">User guides</a>
                     <a href="#">Webinars</a>
@@ -158,6 +159,7 @@
                     <h4>Company</h4>
                     <a href="#">About us</a>
                     <a href="#">Contact us</a>
+                    <a href="#">Careers</a>
                 </div>
                 <div class="link-column">
                     <h4>Plans & Pricing</h4>
@@ -174,6 +176,33 @@
             menu.classList.toggle('show');
         });
         </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyzXBaXco9-UtvUulum44t_PJrmhLKou1Hi-Avwf6TbD9g5Kq-ErZ10H6_c4tMce-MoEQ/exec';
+            const form = document.forms['submit-to-google-sheet'];
+            const msg = document.getElementById("msg");
+        
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    // Display success message
+                    msg.innerHTML = "Message sent successfully";
+                    setTimeout(() => {
+                        msg.innerHTML = "";
+                    }, 5000);
+        
+                    // Clear form fields
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                });
+            });
+        </script>
+        
         
 </body>
 </html>

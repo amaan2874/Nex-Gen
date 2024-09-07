@@ -10,7 +10,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.get-in-touch .form-section{
+    padding: 40px;
+}
 .get-in-touch .form-section,
 .get-in-touch .image-section {
     width: 48%;
@@ -18,9 +20,10 @@
 }
 
 .get-in-touch h2 {
-    color: #00bfff;
+    color: #6E7787;
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 38px;
+    font-weight: bold;
 }
 
 .get-in-touch form {
@@ -169,21 +172,12 @@
         width: 48%;
     }
 
-    .footer-links .link-column {
-        max-width: 48%;
-    }
+    
 }
 
 /* Mobile Phones */
 @media (max-width: 576px) {
-    .navbar .logo {
-        font-size: 18px;
-    }
-
-    .navbar .menu a {
-        font-size: 14px;
-        margin: 0 10px;
-    }
+    
 
     .newsletter input {
         width: 180px;
@@ -217,9 +211,6 @@
         font-size: 16px;
     }
 
-    .footer-links .link-column {
-        max-width: 100%;
-    }
 }
 
 
