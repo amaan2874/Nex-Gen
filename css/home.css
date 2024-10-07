@@ -116,6 +116,80 @@ h6 {
     font-size: 14px;
 }
 
+
+.offerings-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .offerings-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .offerings-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .offerings-item {
+    background-color: #e6f1f7;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 220px; /* Set equal height for all boxes */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    transition: transform 0.3s;
+  }
+  
+  .offerings-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .offerings-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .offerings-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .assistance {
+    background-color: #d4f4ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .assistance h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .assistance p {
+    font-size: 14px;
+    color: #333;
+  }
+  
 /* Content Section */
 .content-section {
     display: flex;
@@ -124,6 +198,7 @@ h6 {
     border-radius: 10px;
     flex-direction: row;
     margin: 0 20px;
+    background: white;
 }
 
 .content-img {
@@ -286,6 +361,15 @@ a {
     .content-section{
         flex-direction: column;
     }
+
+    .offerings-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    
+      .offerings-item, .assistance {
+        height: 200px; /* Adjust the height for smaller screens */
+        text-align: center;
+      }
 }
 
 @media (max-width: 480px) {
@@ -298,4 +382,21 @@ a {
         margin-right: 0;
         margin-bottom: 20px;
     }
+
+    .offerings-grid {
+        grid-template-columns: 1fr;
+      }
+    
+      .offerings-item {
+        height: 180px; /* Adjust the height for very small screens */
+      }
+    
+      .offerings-item img {
+        width: 30px;
+        height: 30px;
+      }
+    
+      .offerings-item h3, .assistance h3 {
+        font-size: 16px;
+      }
 }
