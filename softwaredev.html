@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development</title>
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar">
+        <div class="container">
+            <img src="/images/Group 13.png" alt="logo">
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776;
+            </div>
+            <div class="menu" id="menu">
+                <a href="index.html">Home</a>
+                <a href="services.html">Who We Are</a>
+                <div class="dropdown">
+                    <a href="features.html" class="dropbtn active">What We Do</a>
+                    <div class="dropdown-content">
+                        <a href="softwaredev.html" class="active">Software Development</a>
+                        <a href="mobileapp.html">Mobile Application Development</a>
+                        <a href="customersuccess.html">Customer Success</a>
+                        <a href="cloudser.html">Cloud Services</a>
+                    </div>
+                </div>
+                <!-- <a href="aboutus.html">Products</a> -->
+                <!-- <a href="pricing.html">Our Impact</a> -->
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+     <h1>software dev.</h1>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Product</h4>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <div class="link-column">
+                    <h4>Services</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">User guides</a>
+                    <a href="#">Webinars</a>
+                </div>
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <a href="#">About us</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Careers</a>
+                </div>
+                <!-- <div class="link-column">
+                    <h4>Plans & Pricing</h4>
+                    <a href="#">Personal</a>
+                    <a href="#">Start up</a>
+                    <a href="#">Organization</a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        });
+        </script>
+</body>
+</html>

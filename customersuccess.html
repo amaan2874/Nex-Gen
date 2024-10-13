@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Success</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/customersuccess.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <img src="/images/Group 13.png" alt="logo">
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776;
+            </div>
+            <div class="menu" id="menu">
+                <a href="index.html">Home</a>
+                <a href="services.html">Who We Are</a>
+                <div class="dropdown">
+                    <a href="features.html" class="dropbtn active">What We Do</a>
+                    <div class="dropdown-content">
+                        <a href="softwaredev.html">Software Development</a>
+                        <a href="mobileapp.html">Mobile Application Development</a>
+                        <a href="customersuccess.html" class="active">Customer Success</a>
+                        <a href="cloudser.html">Cloud Services</a>
+                    </div>
+                </div>
+                <!-- <a href="aboutus.html">Products</a> -->
+                <!-- <a href="pricing.html">Our Impact</a> -->
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Top div with content -->
+        <div class="text-content">
+            <h1>Customer Success</h1>
+            <p>BORN is Tech Mahindra's Full Funnel Customer Experience Agency</p>
+        </div>
+
+        <!-- Bottom div with image -->
+        <div class="image-wrapper">
+            <img src="https://insights.techmahindra.com/styles/de2e/s3/images/born_subpage_hero_banner.jpg" alt="Wave Image">
+        </div>
+    </div>
+
+
+    <div class="containertwo">
+        <div class="left">
+            <h1>Experience Services</h1>
+        </div>
+        <div class="right">
+            <p>
+                <strong>BORN</strong>, a Tech Mahindra Company, is a full-funnel customer experience global agency
+                blending human insight, technology, and creativity to unlock incredible new possibilities. We reinvent
+                businesses, products, and experiences for companies poised to lead tomorrow.
+            </p>
+            <p>
+                Our mission: inspire how people engage with the world around them. Our identity as a vertically
+                integrated agency is rooted in a synergy of strategy, design, technology, and operations.
+            </p>
+            <p id="moreText" class="born-hidden-content">
+                While fostering your brand's digital journey, we prioritize the optimization, simplification, and
+                innovation of your Martech Stack, ensuring that your business sets the pace in an ever-evolving
+                marketplace. Our award-winning teams bring world-class strategies, creativity, and content to a
+                distinguished portfolio of clients.
+            </p>
+            <a href="#" id="toggleButton" class="more-link" onclick="toggleText()">More +</a>
+        </div>
+    </div>
+
+    <div style="background-color:#FFF4A3;">
+        
+        <img src="/images/A add 1.png" alt="Wave Image" style="width: 100%;object-fit: cover;">
+      </div>
+
+      <div class="containertwo">
+        <div class="left">
+            <h1>Our Offerings</h1>
+        </div>
+        <div class="right">
+            <p>
+                
+BORN is a customer experience global agency blending human insight, technology, and creativity to unlock incredible new possibilities. We reinvent businesses, products, and experiences for companies poised to lead tomorrow.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Product</h4>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <div class="link-column">
+                    <h4>Services</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">User guides</a>
+                    <a href="#">Webinars</a>
+                </div>
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <a href="#">About us</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Careers</a>
+                </div>
+                <!-- <div class="link-column">
+                    <h4>Plans & Pricing</h4>
+                    <a href="#">Personal</a>
+                    <a href="#">Start up</a>
+                    <a href="#">Organization</a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        });
+
+        function toggleText() {
+            const moreText = document.getElementById("moreText");
+            const toggleButton = document.getElementById("toggleButton");
+
+            if (moreText.classList.contains("born-hidden-content")) {
+                moreText.classList.remove("born-hidden-content");
+                toggleButton.textContent = "Less -";
+            } else {
+                moreText.classList.add("born-hidden-content");
+                toggleButton.textContent = "More +";
+            }
+        }
+    </script>
+</body>
+
+</html>
