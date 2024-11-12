@@ -1,14 +1,86 @@
+
+
+
+
+
+
+.are {
+    font-family: Basis-bold;
+margin: 0%;
+    text-align: left;
+    font-size: 50px;
+    background: linear-gradient(to right, #08c7c7 35%, rgb(11, 9, 39));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 75%;
+    }
+
+    50% {
+        background-position: 100% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%;
+    }
+
+
+}
+.onbelief {
+    font-family: Basis-bold;
+    margin: 0%;
+    letter-spacing: .15rem;
+    font-size: 70px;
+    margin-bottom: 40%;
+    background: linear-gradient(to right, #0ce2ad 35%, rgba(255, 179, 137, 0.9));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 75%;
+    }
+
+    50% {
+        background-position: 100% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%;
+    }
+
+}
+
+
 .containerimg {
-    background-image: url('/images/Image\ 18.png'); /* Add your background image here */
-    background-size: cover; /* Ensure the image covers the entire div */
-    background-position: center; /* Center the background image */
-    height: 100vh; /* Full viewport height */
-    display: flex; /* Flexbox for centering content */
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    text-align: center; /* Center the text */
-    padding: 20px; /* Padding for smaller screens */
-    color: white; /* White text for contrast */
+    background-image: url('https://opentech.ma/assets/img/47beb9201a40a4f652206b2295f12608.gif');
+    /* Add your background image here */
+    background-size: cover;
+    /* Ensure the image covers the entire div */
+    background-position: center;
+    /* Center the background image */
+    width: 100vw;
+    /* Full viewport height */
+    display: flex;
+    /* Flexbox for centering content */
+    justify-content: center;
+    /* Horizontally center the content */
+    align-items: center;
+    /* Vertically center the content */
+    text-align: center;
+    /* Center the text */
+    /* padding: 20px; */
+    /* Padding for smaller screens */
+    color: white;
+    /* White text for contrast */
     background-repeat: no-repeat;
 }
 
@@ -213,6 +285,12 @@ h1 {
     .faq-answer p {
         font-size: 0.9rem;
     }
+    .onbelief{
+        font-size: 1em;
+    }
+    .are{
+        font-size: 1em;
+    }
 }
 
 /* Mobile responsive design */
@@ -235,6 +313,12 @@ h1 {
     .content {
         padding: 15px; /* Less padding on smaller screens */
     }
+    .onbelief{
+        font-size: 2em;
+    }
+    .are{
+        font-size: 2em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -248,5 +332,11 @@ h1 {
 
     .btn {
         font-size: 1rem; /* Smaller button text */
+    }
+    .onbelief{
+        font-size: 1em;
+    }
+    .are{
+        font-size: 1em;
     }
 }
